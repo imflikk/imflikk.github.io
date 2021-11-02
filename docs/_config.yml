@@ -14,24 +14,40 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 masthead_title: "Home"
-search: true
 title: InfoSec Adventures
 email: flikkme@gmail.com
 author:
   name: Matt Sorrell
   bio: "Pentester/Red Teamer"
+  location: "California"
   links:
   - label: "Home"
+    icon: "fas fa-fw fa-link"
     url: "https://imflikk.github.io"
   - label: "Github"
+    icon: "fab fa-fw fa-github"
     url: "https://github.com/imflikk"
   - label: "Twitter"
+    icon: "fab fa-fw fa-twitter-square"
     url: "https://twitter.com/iamflikk"
   - label: "LinkedIn"
+    icon: "fab fa-fw fa-linkedin"
     url: "https://www.linkedin.com/in/matthew-sorrell/"
+    
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/iamflikk"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/imflikk"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/matthew-sorrell/"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Mostly cybersecurity and/or pentesting topics I find interesting.
+  Mostly cybersecurity and/or pentesting t I find interesting.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://imflikk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: iamflikk
@@ -39,9 +55,30 @@ github_username:  imflikk
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hacker
+#theme: jekyll-theme-hacker
+
+# Theme config
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dark"
+search: true
+timezone: "America/Los_Angeles"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
   
 
 # Exclude from processing.
