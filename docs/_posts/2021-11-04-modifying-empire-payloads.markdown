@@ -138,7 +138,7 @@ With this in mind, we should be able to modify the payload as long as it perform
 
 ![](../assets/images/2021-11-04/18-amsi-bypass-test.png)
 
-Unfortunately, it looks like the bypass itself is detected as malicious and even associated with an "AmsiTamper" signature.  I'm not going to worry about the ETW bypass for now , but it was also seen as malicious on its own.
+Unfortunately, it looks like the bypass itself is detected as malicious and even associated with an "AmsiTamper" signature.  I'm not going to worry about the ETW bypass for now, but it was also seen as malicious on its own.
 
 As another test, I removed both bypasses from the script and a few lines related to proxies as I don't need them in this case.  I then pasted the entire command back into a regular PowerShell window as a one-liner to see what happens.  This was also detected, but this time was much more specific in that it was seen as a PowerShell Attack Tool.  
 
